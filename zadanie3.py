@@ -3,6 +3,7 @@
 # for i in range(8, 0, -1):
 #     print("o" * i)
 
-imiona = 'Adam Ewa Janusz Dorota'
-text = imiona.split()
-print(text)
+# imiona = 'Adam Ewa Janusz Dorota'
+# text = imiona.split()
+# print(text)
+
