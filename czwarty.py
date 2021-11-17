@@ -25,6 +25,9 @@ slownik = {"jeden": 1,
            "dwa": 2,
            "trzy": 3}
 
+for key, value in slownik.items():
+    print(key + " --> " + str(value))
+
 print(slownik)
 print(slownik["dwa"])
 print(slownik.keys())
@@ -39,4 +42,3 @@ print(slownik2)
 
 __ROK = 2021
 print(__ROK)
-
