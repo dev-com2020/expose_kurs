@@ -33,10 +33,9 @@ def funk():
 # print(liczba(3, 3))
 
 def dekor(funkcja):
-    def wew(*args, **kwargs):
-        print("Dekorujemy funkcję!")
-        return funkcja(*args, **kwargs)
-
+    def wew():
+        print("Nazwa funkcji:",funkcja.__name__)
+        return funkcja()
     return wew
 
 
@@ -48,6 +47,19 @@ def zwykla(a, b, c):
 @dekor
 def pomnoz(a, b):
     print("Wynik mnożenia=", a * b)
+
+@dekor
+def pierwsza():
+    print("ja tu sobie działam...")
+
+@dekor
+def druga():
+    print("a ja sobie też działam tutaj...")
+
+pierwsza()
+druga()
+pierwsza()
+
 
 #
 # zwykla(1, 2, 3)
