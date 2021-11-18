@@ -12,3 +12,4 @@ def podziel(a, b):
 
 def pomnoz(a, b):
     return "wynik=", a * b
+
