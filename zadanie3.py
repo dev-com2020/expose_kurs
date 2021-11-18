@@ -7,3 +7,14 @@
 # text = imiona.split()
 # print(text)
 
+# liczba = int(input("Wprowadź liczbę: "))
+# liczba2 = int(input("Wprowadź 2 liczbę: "))
+# print("Czy różne?: ", liczba != liczba2)
+
+'''
+1.<,!=,<=
+2.<,!=,<=
+3.!=
+4.!=
+5.==,<=,>=
+'''
