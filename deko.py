@@ -1,3 +1,6 @@
+import time
+
+
 def wykonaj(funkcja, a, b):
     x = funkcja(a, b)
     return x
@@ -33,34 +36,39 @@ def funk():
 # print(liczba(3, 3))
 
 def dekor(funkcja):
-    def wew():
-        print("Nazwa funkcji:",funkcja.__name__)
-        return funkcja()
+    def wew(*args, **kwargs):
+        start = time.time()
+        x = funkcja(*args, **kwargs)
+        koniec = time.time()
+        print("Nazwa funkcji:", funkcja.__name__, "wykonywała się", koniec - start, "sekund.")
+        return x
+
     return wew
 
 
 @dekor
 def zwykla(a, b, c):
     print("TO jest zwykła funkcja")
+    time.sleep(3)
     print("Wynik=", a + b + c)
+
 
 @dekor
 def pomnoz(a, b):
+    time.sleep(3)
     print("Wynik mnożenia=", a * b)
+
 
 @dekor
 def pierwsza():
+    time.sleep(1)
     print("ja tu sobie działam...")
+
 
 @dekor
 def druga():
     print("a ja sobie też działam tutaj...")
 
-pierwsza()
-druga()
-pierwsza()
 
-
-#
-# zwykla(1, 2, 3)
-# pomnoz(3,4)
+pomnoz(3,4)
+zwykla(1, 2, 3)
